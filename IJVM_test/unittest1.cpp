@@ -14,7 +14,7 @@ namespace IJVM_test
 		TEST_METHOD(TestMethod1)
 		{
 			// TODO: Your test code here
-
+			MicroInstruction instr1(0, 101, 0, 0, 0, 0, 0);
 		}
 
 	};

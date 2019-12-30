@@ -116,11 +116,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ControlStore.h" />
+    <ClInclude Include="ijvm.h" />
     <ClInclude Include="Memory.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ControlStore.cpp" />
     <ClCompile Include="ijvm.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source.ijava" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

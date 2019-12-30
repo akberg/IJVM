@@ -1,0 +1,4 @@
+﻿  ijvm.cpp
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xlocinfo.h(33): warning C4005: '_SP': macro redefinition
+  c:\users\andreas\documents\dev\c\ijvm\ijvm\controlstore.h(69): note: see previous definition of '_SP'
+  IJVM.vcxproj -> C:\Users\Andreas\Documents\Dev\C\IJVM\x64\Debug\IJVM.exe

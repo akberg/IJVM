@@ -21,6 +21,9 @@
     <ClInclude Include="Memory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ijvm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ijvm.cpp">
@@ -29,5 +32,13 @@
     <ClCompile Include="ControlStore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source.ijava">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
