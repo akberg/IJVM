@@ -1,4 +1,11 @@
 ﻿  ijvm.cpp
 c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xlocinfo.h(33): warning C4005: '_SP': macro redefinition
   c:\users\andreas\documents\dev\c\ijvm\ijvm\controlstore.h(69): note: see previous definition of '_SP'
+  main.cpp
+c:\users\andreas\documents\dev\c\ijvm\ijvm\memory.h(14): warning C4838: conversion from 'unsigned int' to 'uint8_t' requires a narrowing conversion
+c:\users\andreas\documents\dev\c\ijvm\ijvm\memory.h(14): warning C4305: 'initializing': truncation from 'unsigned int' to 'uint8_t'
+c:\users\andreas\documents\dev\c\ijvm\ijvm\memory.h(14): warning C4309: 'initializing': truncation of constant value
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xlocinfo.h(33): warning C4005: '_SP': macro redefinition
+  c:\users\andreas\documents\dev\c\ijvm\ijvm\controlstore.h(69): note: see previous definition of '_SP'
+  Generating Code...
   IJVM.vcxproj -> C:\Users\Andreas\Documents\Dev\C\IJVM\x64\Debug\IJVM.exe

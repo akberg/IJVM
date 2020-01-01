@@ -173,23 +173,23 @@ const MicroInstruction controlStore[512] = {
 	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
 	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
 	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// 0x057 POP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// 0x059 DUP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// 0x05f SWAP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// 0x060 IADD
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// 0x064 ISUB
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
+	MicroInstruction(0x100, 0, 0b010100, _TOS, 0, 0),			// 0x056 pop3 TOS = MDR; goto Main
+	MicroInstruction(0x58, 0, 0b110110, _MAR + _SP, 4, 4),		// 0x057 POP1 MAR = SP = SP - 1; rd
+	MicroInstruction(0x56, 0, 0, 0, 0, 9),						// 0x058 pop2 NOP
+	MicroInstruction(0x60, 0, 0b110101, _MAR + _SP, 0, 4),		// 0x059 DUP1 MAR = SP = SP + 1
+	MicroInstruction(0x100, 0, 0b010100, _MDR, 2, 7),			// 0x060 dup2 MDR = TOS; wr; goto Main
+	MicroInstruction(0x5c, 0, 0b010100, _H, 2, 0),				// 0x05b swap3 H = MDR; wr
+	MicroInstruction(0x5d, 0, 0b010100, _MDR, 0, 7),			// 0x05c swap4 MDR = TOS
+	MicroInstruction(0x5e, 0, 0b110110, _MAR, 2, 4),			// 0x05d swap5 MAR = SP - 1; wr
+	MicroInstruction(0x100, 0, 0b011000, _TOS, 0, 9),			// 0x05e swap6 TOS = H; goto Main
+	MicroInstruction(0x61, 0, 0b110110, _MAR, 4, 4),			// 0x05f SWAP1 MAR = SP - 1; rd
+	MicroInstruction(0x62, 0, 0b110110, _SP + _MAR, 4, 4),		// 0x060 IADD1 MAR = SP = SP - 1; rd
+	MicroInstruction(0x5b, 0, 0b010100, _MAR, 0, 4),			// 0x061 swap2 MAR = SP
+	MicroInstruction(0x63, 0, 0b010100, _H, 0, 7),				// 0x062 iadd2 H = TOS
+	MicroInstruction(0x100, 0, 0b111100, _MDR + _TOS, 2, 7),	// 0x063 iadd3 MDR = TOS = MDR + H; wr; goto Main
+	MicroInstruction(0x65, 0, 0b110110, _MAR + _SP, 4, 4),		// 0x064 ISUB1 MAR = SP = SP - 1; rd
+	MicroInstruction(0x66, 0, 0b010100, _H, 0, 7),				// 0x065 isub2 H = TOS
+	MicroInstruction(0x100, 0, 0b111111, _MDR + _TOS, 2, 0),	// 0x066 isub3 MDR = TOS = MDR - H; wr; goto Main
 	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
 	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
 	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
@@ -213,12 +213,12 @@ const MicroInstruction controlStore[512] = {
 	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
 	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
 	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// 0x07e IAND
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// 0x080 IOR
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
-	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
+	MicroInstruction(0, 0, 0b110110, _MAR + _SP, 4, 4),			// 0x07e IAND1 MAR = SP = SP - 1; rd
+	MicroInstruction(0, 0, 0b010100, _H, 0, 7),					// NOP iand2 H = TOS
+	MicroInstruction(0, 0, 0b110110, _MAR + _SP, 4, 4),			// 0x080 IOR1 MAR = SP = SP - 1; rd
+	MicroInstruction(0, 0, 0b001100, _MDR + _TOS, 2, 0),		// NOP iand3 MDR = TOS = MDR & H; wr; goto Main
+	MicroInstruction(0, 0, 0b010100, _H, 0, 7),					// NOP ior2 H = TOS
+	MicroInstruction(0, 0, 0b011100, _MDR + _TOS, 2, 0),		// NOP ior3 MDR = TOS = MDR | H; wr; goto Main
 	MicroInstruction(0, 0, 0, 0, 0, 0),		// 0x084 IINC
 	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP
 	MicroInstruction(0, 0, 0, 0, 0, 0),		// NOP

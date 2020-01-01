@@ -57,7 +57,7 @@ void IJVM::cycle(bool debug) {
 	if (debug) getchar();
 
 	// Fetch microinstruksjon
-	MicroInstruction MIR = controlStore[MPC];
+	MIR = controlStore[MPC];
 		
 	// Drive B bus
 	switch (MIR.b)
