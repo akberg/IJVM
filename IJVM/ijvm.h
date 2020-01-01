@@ -70,6 +70,8 @@ public:
 	uint32_t getBusB() { return B; }			// B bus, for alu B input
 	uint32_t getBusC() { return C; }			// C bus, for alu output
 
+	MicroInstruction getMIR() { return MIR; }
+
 	void display();
 };
 
