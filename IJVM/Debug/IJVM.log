@@ -1,6 +1,9 @@
-﻿  ControlStore.cpp
-  ijvm.cpp
-d:\users\andreas\documents\dev\c\ijvm\ijvm\ijvm.cpp(66): warning C4554: '^': check operator precedence for possible error; use parentheses to clarify precedence
-d:\users\andreas\documents\dev\c\ijvm\ijvm\ijvm.cpp(26): warning C4101: 'memory': unreferenced local variable
-  Generating Code...
-LINK : fatal error LNK1561: entry point must be defined
+﻿  VirtualMachine.cpp
+c:\users\andreas\documents\dev\c\ijvm\ijvm\controlstore.h(69): warning C4005: '_SP': macro redefinition
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xlocinfo.h(33): note: see previous definition of '_SP'
+c:\users\andreas\documents\dev\c\ijvm\ijvm\virtualmachine.cpp(37): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  IJVM.vcxproj -> C:\Users\Andreas\Documents\Dev\C\IJVM\Debug\IJVM.exe

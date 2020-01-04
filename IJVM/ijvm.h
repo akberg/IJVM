@@ -2,7 +2,7 @@
 #include <stdint.h>
 #include "ControlStore.h"
 /*
-	IJVM Mic-1 architecture
+	\brief IJVM Mic-1 architecture
 */
 class IJVM {
 private:

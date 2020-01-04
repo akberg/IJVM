@@ -1,20 +1,22 @@
 #include "ijvm.h"
 #include "Memory.h"
+#include "virtualMachine.h"
 #include <iostream>
 
 int main() {
+	virtualMachine();
 	IJVM computer(prgm, stack, 0, 0);
 
 	// TODO: Load a program into a memory.
 	//		 Define a stack and other memory locations
 
-	while (1) {
-		// Run one cycle
-		computer.cycle(false);
-		// Update
-		//computer.display();
-		//std::getchar();
-	}
+	//while (1) {
+	//	// Run one cycle
+	//	computer.cycle(false);
+	//	// Update
+	//	//computer.display();
+	//	//std::getchar();
+	//}
 }
 
 void IJVM::display() {

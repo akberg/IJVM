@@ -1,4 +1,14 @@
-CP:	0xdeadbeef
+CP:	
+	0xdeadbeef
 	0xf00df00d
 	0xdecade20
+	0xdeaddead
+	0x01234567
+	0x89abcdef
 
+main:
+	ILOAD 1
+	ILOAD 2
+	IADD
+	BIPUSH 42
+	ISTORE 1
