@@ -42,22 +42,22 @@ public:
 MicroInstruction decode(int word);
 
 enum isa { 
-	BIPUSH = 0x10,			// Push byte onto stack
+	BIPUSH = 0x10,			// Push byte onto stack.
 	DUP = 0x59,				// Copy top word on stack and push onto stack
 	GOTO = 0xA7,			// Unconditional branch
 	IADD = 0x60,			// Pop to words from stack; Push their sum
 	IAND = 0x7E,			// Pop to words from stack; Push boolean AND
-	IFEQ = 0x99,			// Pop word from stack and branch if zero
-	IFLT = 0x9B,			// Pop word from stack and branch if less than zero
-	IF_ICMPEQ = 0x9F,		// Pop to words from stack; Branch if equal
-	IINC = 0x84,			// Add a constant to a local variable 
+	IFEQ = 0x99,			// Pop word from stack and branch if zero TODO: Implement
+	IFLT = 0x9B,			// Pop word from stack and branch if less than zero TODO: Implement
+	IF_ICMPEQ = 0x9F,		// Pop to words from stack; Branch if equal TODO: Implement
+	IINC = 0x84,			// Add a constant to a local variable TODO: Implement
 	ILOAD = 0x15,			// Push local variable onto stack
-	INVOKEVIRTUAL = 0xB6,	// Invoke a method
+	INVOKEVIRTUAL = 0xB6,	// Invoke a method TODO: Implement
 	IOR = 0x80,				// Pop to words from stack; Push boolean OR
-	IRETURN = 0xAC,			// Return from method with integer value
+	IRETURN = 0xAC,			// Return from method with integer value TODO: Implement
 	ISTORE = 0x36,			// Pop word from stack and store in a local variable
 	ISUB = 0x64,			// Pop to words from stack; Push their difference
-	LDC_W = 0x13,			// Push constant from constant pool onto stack
+	LDC_W = 0x13,			// Push constant from constant pool onto stack TODO: Implement
 	NOP = 0x0,				// Do nothing
 	POP = 0x57,				// Delete word on top of stack
 	SWAP = 0x5F,			// Swap the two top words on the stack
